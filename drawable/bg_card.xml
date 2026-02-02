@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Card Background Color -->
+    <solid android:color="#252A34" />
+
+    <!-- Rounded Corners -->
+    <corners android:radius="16dp" />
+
+    <!-- Light Border -->
+    <stroke
+        android:width="1dp"
+        android:color="#3A3F47" />
+
+    <!-- Shadow / Elevation (works at runtime) -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+
+</shape>

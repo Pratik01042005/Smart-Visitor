@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Vehicle body -->
+    <path
+        android:fillColor="@color/red"
+        android:pathData="M3,13 L5,8 H19 L21,13 V19 H20
+                          C20,20.1 19.1,21 18,21
+                          C16.9,21 16,20.1 16,19
+                          H8
+                          C8,20.1 7.1,21 6,21
+                          C4.9,21 4,20.1 4,19
+                          H3 Z"/>
+
+    <!-- Front wheel -->
+    <path
+        android:fillColor="@color/red"
+        android:pathData="M6,19 A1.5,1.5 0 1,0 6,16 A1.5,1.5 0 1,0 6,19"/>
+
+    <!-- Back wheel -->
+    <path
+        android:fillColor="@color/red"
+        android:pathData="M18,19 A1.5,1.5 0 1,0 18,16 A1.5,1.5 0 1,0 18,19"/>
+
+</vector>
