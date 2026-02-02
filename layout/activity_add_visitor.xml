@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:padding="16dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_back_white" />
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:text="Visitor Entry / Exit"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/text_white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- TOKEN -->
+        <TextView
+            android:id="@+id/tvToken"
+            android:text="Token: Auto Generated"
+            android:textColor="@color/yellow"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp" />
+
+        <!-- NAME -->
+        <EditText
+            android:id="@+id/etName"
+            style="@style/EditFieldStyle"
+            android:hint="Visitor Full Name" />
+
+        <!-- TOGGLE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/btnEntry"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Entry Visitor"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button_red"
+                android:textColor="@color/text_white" />
+
+            <Button
+                android:id="@+id/btnExit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Visitor Exit"
+                android:layout_marginStart="10dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button_dark"
+                android:textColor="@color/text_white" />
+        </LinearLayout>
+
+        <!-- ================= ENTRY LAYOUT ================= -->
+        <LinearLayout
+            android:id="@+id/layoutEntry"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="12dp">
+
+            <!-- DATE -->
+            <EditText
+                android:id="@+id/etVisitDateTime"
+                style="@style/EditFieldStyle"
+                android:hint="Visiting Date and Time"
+                android:focusable="false"
+                android:layout_marginBottom="20dp"
+                android:clickable="true" />
+
+            <!-- PHOTO -->
+            <ImageView
+                android:id="@+id/ivPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/bg_card_round"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_camera"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <!-- PURPOSE -->
+            <Spinner
+                android:id="@+id/spPurpose"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/input_field"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:text="Temporary Address"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/text_white"
+                android:textStyle="bold" />
+
+            <EditText android:id="@+id/etTempAddressLine"
+                style="@style/EditFieldStyle"
+                android:hint="Temporary Address Line" />
+
+            <EditText android:id="@+id/etTempCity"
+                style="@style/EditFieldStyle"
+                android:hint="Temporary City" />
+
+            <EditText android:id="@+id/etTempPincode"
+                style="@style/EditFieldStyle"
+                android:hint="Temporary Pincode"
+                android:inputType="number"
+                android:maxLength="6"/>
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:text="Permanent Address"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/text_white"
+                android:textStyle="bold" />
+
+            <EditText android:id="@+id/etPermAddressLine"
+                style="@style/EditFieldStyle"
+                android:hint="Permanent Address Line" />
+
+            <EditText android:id="@+id/etPermCity"
+                style="@style/EditFieldStyle"
+                android:hint="Permanent City" />
+
+            <EditText android:id="@+id/etPermPincode"
+                style="@style/EditFieldStyle"
+                android:hint="Permanent Pincode"
+                android:inputType="number"
+                android:maxLength="6"/>
+
+            <EditText android:id="@+id/etPhone"
+                style="@style/EditFieldStyle"
+                android:text="+91 "
+                android:inputType="phone"
+                android:maxLength="14"/>
+
+            <EditText android:id="@+id/etEmail"
+                style="@style/EditFieldStyle"
+                android:hint="example@gmail.com"/>
+
+            <EditText android:id="@+id/etWhomToMeet"
+                style="@style/EditFieldStyle"
+                android:hint="Whom To Meet"/>
+
+            <EditText android:id="@+id/etPhoneWhom"
+                style="@style/EditFieldStyle"
+                android:text="+91 "
+                android:inputType="phone"
+                android:maxLength="14"/>
+
+            <EditText android:id="@+id/etDescription"
+                style="@style/EditFieldStyle"
+                android:hint="Description"/>
+
+            <Button
+                android:id="@+id/btnAddVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Add Vehicle (Optional)"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_button_dark"
+                android:textColor="@color/text_white"/>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Save Visitor"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_button_red"
+                android:textColor="@color/text_white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutExit"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <EditText
+                android:id="@+id/etExitDateTime"
+                style="@style/EditFieldStyle"
+                android:hint="Exit Date and Time"
+                android:focusable="false"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:clickable="true" />
+
+            <EditText
+                android:id="@+id/etRemark"
+                style="@style/EditFieldStyle"
+                android:hint="Remark"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+
+            <TextView
+                android:text="Will visitor come again?"
+                android:textColor="@color/text_white"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="16dp"/>
+
+            <RadioGroup
+                android:id="@+id/rgAgainVisit"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbYes"
+                    android:text="Yes"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/text_white"/>
+
+                <RadioButton
+                    android:id="@+id/rbNo"
+                    android:text="No"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/text_white"
+                    android:layout_marginStart="40dp"/>
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/etNextVisit"
+                style="@style/EditFieldStyle"
+                android:hint="Next Visit Date and Time"
+                android:visibility="gone"
+                android:focusable="false"
+                android:clickable="true"/>
+
+            <Button
+                android:id="@+id/btnUpdateExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Exit"
+                android:background="@drawable/bg_button_red"
+                android:textColor="@color/text_white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

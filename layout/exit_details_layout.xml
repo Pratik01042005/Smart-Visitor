@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etExitDateTime"
+            style="@style/EditFieldStyle"
+            android:hint="Exit Date and Time"
+            android:focusable="false"
+            android:clickable="true"/>
+
+        <EditText
+            android:id="@+id/etRemark"
+            style="@style/EditFieldStyle"
+            android:hint="Visitor Remark"
+            android:minLines="3"
+            android:gravity="top"/>
+
+        <TextView
+            android:text="Will visitor come again?"
+            android:textColor="@color/text_white"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgAgainVisit"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbYes"
+                android:text="Yes"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_white"/>
+
+            <RadioButton
+                android:id="@+id/rbNo"
+                android:text="No"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_white"
+                android:layout_marginStart="40dp"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etNextVisit"
+            style="@style/EditFieldStyle"
+            android:hint="Next Visit Date and Time"
+            android:visibility="gone"
+            android:focusable="false"
+            android:clickable="true"/>
+
+        <EditText
+            android:id="@+id/etMessage"
+            style="@style/EditFieldStyle"
+            android:hint="Message (optional)"
+            android:minLines="2"
+            android:gravity="top"/>
+
+        <Spinner
+            android:id="@+id/spStatus"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/input_field"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btnUpdateExit"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Update Exit Details"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bg_button_red"
+            android:textColor="@color/text_white"/>
+
+    </LinearLayout>
+</ScrollView>

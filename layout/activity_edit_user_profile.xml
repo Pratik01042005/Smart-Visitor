@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg_dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_back_white"/>
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:text="Edit Profile"
+                android:textSize="20sp"
+                android:textColor="@color/text_white"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/etName"
+            style="@style/EditFieldStyle"
+            android:hint="Full Name"/>
+
+        <EditText
+            android:id="@+id/etPhone"
+            style="@style/EditFieldStyle"
+            android:hint="Phone"
+            android:inputType="phone"
+            android:maxLength="10"/>
+
+        <TextView
+            android:id="@+id/tvEmail"
+            style="@style/EditFieldStyle"
+            android:textColor="@color/text_grey"/>
+
+        <EditText
+            android:id="@+id/etAddress"
+            style="@style/EditFieldStyle"
+            android:hint="Address"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:background="@drawable/bg_button_dark"
+                android:textColor="@color/text_white"/>
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="Save"
+                android:background="@drawable/bg_button_red"
+                android:textColor="@color/text_white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

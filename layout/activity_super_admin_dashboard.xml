@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg_dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <!-- HEADER -->
+  <LinearLayout
+      android:id="@+id/headerLayout"
+      android:layout_width="match_parent"
+      android:layout_height="200dp"
+      android:orientation="vertical"
+      android:padding="20dp"
+      android:background="@drawable/bg_header_red">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+      <!-- PROFILE IMAGE -->
+      <ImageView
+          android:id="@+id/imgProfile"
+          android:layout_width="55dp"
+          android:layout_height="55dp"
+          android:src="@drawable/ic_profile"
+          android:background="@drawable/bg_card_round"
+          android:padding="10dp"
+          android:layout_alignParentStart="true"/>
+
+      <!-- SUPER ADMIN NAME -->
+      <TextView
+          android:id="@+id/tvAdminName"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toEndOf="@id/imgProfile"
+          android:layout_centerVertical="true"
+          android:layout_marginStart="12dp"
+          android:text="Super Admin"
+          android:textColor="@color/text_white"
+          android:textSize="18sp"
+          android:textStyle="bold"/>
+
+      <!-- MENU -->
+      <ImageView
+          android:id="@+id/btnMenu"
+          android:layout_width="28dp"
+          android:layout_height="28dp"
+          android:layout_alignParentEnd="true"
+          android:src="@drawable/ic_options"/>
+
+      <!-- CALENDAR -->
+      <ImageView
+          android:id="@+id/btnCalendar"
+          android:layout_width="28dp"
+          android:layout_height="28dp"
+          android:layout_toLeftOf="@id/btnMenu"
+          android:layout_marginEnd="15dp"
+          android:src="@drawable/ic_calendar"/>
+    </RelativeLayout>
+
+    <!-- SEARCH -->
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Search visitor"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_field"
+        android:padding="15dp"
+        android:textColor="@color/text_white"
+        android:textColorHint="@color/text_grey"/>
+  </LinearLayout>
+
+  <!-- VISITOR LIST -->
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recyclerVisitors"
+      android:layout_below="@id/headerLayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:padding="15dp"/>
+
+  <!-- ADD VISITOR -->
+  <ImageView
+      android:id="@+id/btnAddVisitor"
+      android:layout_width="65dp"
+      android:layout_height="65dp"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentEnd="true"
+      android:layout_margin="20dp"
+      android:src="@drawable/ic_add"
+      android:background="@drawable/bg_button_round"
+      android:padding="20dp"/>
+</RelativeLayout>

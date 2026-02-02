@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/red">
+
+    <ImageView
+        android:id="@+id/imgLogo1"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/logo"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/txtTitle1"
+        android:text="Welcome To Meetpoint "
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/imgLogo1"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:text="Your Time, Perfectly Planned "
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/txtTitle1"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

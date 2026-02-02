@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- HEADER -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_back_white" />
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:text="Edit Visitor"
+                android:textColor="@color/text_white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <!-- NAME -->
+        <EditText
+            android:id="@+id/etName"
+            style="@style/EditFieldStyle"
+            android:hint="Visitor Name" />
+
+        <!-- PHONE -->
+        <EditText
+            android:id="@+id/etPhone"
+            style="@style/EditFieldStyle"
+            android:hint="Phone number"
+            android:inputType="phone"
+            android:maxLength="10" />
+
+        <!-- EMAIL -->
+        <EditText
+            android:id="@+id/etEmail"
+            style="@style/EditFieldStyle"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <!-- GENDER -->
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="Gender"
+            android:textColor="@color/text_white"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbMale"
+                android:text="Male"
+                android:textColor="@color/text_white" />
+
+            <RadioButton
+                android:id="@+id/rbFemale"
+                android:text="Female"
+                android:textColor="@color/text_white"
+                android:layout_marginStart="40dp" />
+
+            <RadioButton
+                android:id="@+id/rbOther"
+                android:text="Other"
+                android:textColor="@color/text_white"
+                android:layout_marginStart="40dp" />
+        </RadioGroup>
+
+        <!-- PURPOSE -->
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="Purpose"
+            android:textColor="@color/text_white"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spPurpose"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/input_field" />
+
+        <!-- WHOM TO MEET (NEW) -->
+        <EditText
+            android:id="@+id/etWhomToMeet"
+            style="@style/EditFieldStyle"
+            android:hint="Whom to meet (Person / Dept)" />
+
+        <!-- ADDRESS -->
+        <EditText
+            android:id="@+id/etAddress"
+            style="@style/EditFieldStyle"
+            android:hint="Address" />
+
+        <!-- DESCRIPTION -->
+        <EditText
+            android:id="@+id/etDescription"
+            style="@style/EditFieldStyle"
+            android:hint="Description"
+            android:minLines="3"
+            android:gravity="top" />
+
+        <!-- DATE -->
+        <EditText
+            android:id="@+id/etDate"
+            style="@style/EditFieldStyle"
+            android:hint="Visit Date"
+            android:focusable="false" />
+
+        <!-- TIME -->
+        <EditText
+            android:id="@+id/etTime"
+            style="@style/EditFieldStyle"
+            android:hint="Visit Time"
+            android:focusable="false" />
+
+        <!-- BUTTONS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textColor="@color/text_white"
+                android:background="@drawable/bg_button_dark" />
+
+            <Space
+                android:layout_width="10dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:text="Update"
+                android:textColor="@color/text_white"
+                android:background="@drawable/bg_button_red" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/ivSuccessCheck"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/ic_success"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"/>
+
+    <TextView
+        android:id="@+id/tvSuccessTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Success"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_white"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ivSuccessCheck"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvEmailMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please check your email for reset link"
+        android:textColor="@color/text_grey"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:layout_below="@id/tvSuccessTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvResubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resubmit"
+        android:textColor="@color/red"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_below="@id/tvEmailMessage"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btnCreateNewPass"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="259dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_button_red"
+        android:text="Create new password"
+        android:textColor="@color/text_white"
+        android:textSize="16sp" />
+
+</RelativeLayout>

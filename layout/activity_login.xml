@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="5dp"
+            android:src="@drawable/arrow_back"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_marginTop="100dp"
+            android:text="Log In"
+            android:textColor="@color/bg_button"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Email address"
+            android:padding="15dp"
+            android:textColor="@color/text_white"
+            android:textColorHint="@color/text_grey"
+            android:background="@drawable/input_field" />
+
+        <!-- PASSWORD WITH EYE -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp">
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:textColor="@color/text_white"
+                android:textColorHint="@color/text_grey"
+                android:background="@drawable/input_field"
+                android:paddingEnd="50dp"/>
+
+            <ImageView
+                android:id="@+id/ivTogglePassword"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/ic_eye_closed"/>
+        </RelativeLayout>
+
+        <!-- Forgot Password -->
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_marginTop="8dp"
+            android:text="Forgot password?"
+            android:textColor="@color/bg_button"
+            android:textSize="14sp"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:text="Log In"
+            android:textColor="@color/text_white"
+            android:backgroundTint="@color/bg_button"
+            android:textStyle="bold" />
+
+        <!-- Signup Redirect -->
+        <TextView
+            android:id="@+id/tvSignup"
+            android:text="Don't have an account? Sign Up"
+            android:textColor="@color/text_white"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardVisitor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:backgroundTint="@color/card_dark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <!-- ================= NAME + STATUS ================= -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvVisitorName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Visitor Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"/>
+
+            <TextView
+                android:id="@+id/tvVisitorStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pending"
+                android:textSize="12sp"
+                android:textColor="@color/text_white"
+                android:padding="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:background="@drawable/bg_status_yellow"/>
+        </LinearLayout>
+
+        <!-- ================= DATE + PURPOSE + EYE ================= -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <!-- LEFT SIDE (DATE + PURPOSE) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvVisitorDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12 Jan 2026"
+                    android:textColor="@color/text_grey"/>
+
+                <TextView
+                    android:id="@+id/tvVisitorPurpose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Meeting"
+                    android:textColor="@color/text_grey"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <!-- RIGHT SIDE (EYE BUTTON) -->
+            <ImageView
+                android:id="@+id/btnViewDetails"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_view_details"
+                android:padding="8dp"
+                android:background="@drawable/bg_button_round"
+                android:contentDescription="View Details"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

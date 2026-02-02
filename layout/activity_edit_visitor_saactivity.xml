@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- HEADER -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_back_white"
+                app:tint="@color/text_white"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Visitor"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="50dp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/etName"
+            style="@style/EditFieldStyle"
+            android:hint="Visitor Name"/>
+
+        <EditText
+            android:id="@+id/etPhone"
+            style="@style/EditFieldStyle"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:maxLength="10"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            style="@style/EditFieldStyle"
+            android:hint="Email"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/etAddress"
+            style="@style/EditFieldStyle"
+            android:hint="Address"/>
+
+        <EditText
+            android:id="@+id/etPurpose"
+            style="@style/EditFieldStyle"
+            android:hint="Purpose"/>
+
+        <!-- WHOM TO MEET -->
+        <EditText
+            android:id="@+id/etWhomToMeet"
+            style="@style/EditFieldStyle"
+            android:hint="Whom to meet"/>
+
+        <!-- DATE PICKER -->
+        <EditText
+            android:id="@+id/etDate"
+            style="@style/EditFieldStyle"
+            android:hint="Select Date"
+            android:focusable="false"
+            android:clickable="true"/>
+
+        <!-- TIME PICKER -->
+        <EditText
+            android:id="@+id/etTime"
+            style="@style/EditFieldStyle"
+            android:hint="Select Time"
+            android:focusable="false"
+            android:clickable="true"/>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Update Visitor"
+            android:background="@drawable/bg_button_red"
+            android:textColor="@color/text_white"
+            android:layout_marginTop="25dp"/>
+    </LinearLayout>
+</ScrollView>

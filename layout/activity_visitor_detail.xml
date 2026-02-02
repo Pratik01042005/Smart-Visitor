@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ================= HEADER ================= -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_back_white" />
+
+            <LinearLayout
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/btnEdit"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_edit" />
+
+                <ImageView
+                    android:id="@+id/btnDelete"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_delete" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivVisitorPhoto"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user" />
+
+            <TextView
+                android:id="@+id/tvVisitorName"
+                android:text="Visitor Name"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/tvToken"
+                android:text="Token #1234"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/yellow"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:text="STATUS : PENDING"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnEntry"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="55dp"
+                android:text="ENTRY VISITOR"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:background="@drawable/bg_button_red"
+                android:layout_marginEnd="10dp" />
+
+            <Button
+                android:id="@+id/btnExit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="55dp"
+                android:text="VISITOR EXIT"
+                android:textStyle="bold"
+                android:textColor="@color/text_white"
+                android:background="@drawable/bg_button_dark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutEntry"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="ENTRY DETAILS"
+                android:textColor="@color/yellow"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <TextView android:id="@+id/tvVisitDateTime"
+                style="@style/EditFieldStyle"/>
+
+            <TextView android:id="@+id/tvPurpose"
+                style="@style/EditFieldStyle"/>
+
+            <TextView
+                android:text="Temporary Address"
+                android:textColor="@color/yellow"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" />
+
+            <TextView android:id="@+id/tvTempAddress"
+                style="@style/EditFieldStyle"
+                android:hint="Temporary Address line"/>
+
+            <TextView android:id="@+id/tvTempAddresscity"
+                style="@style/EditFieldStyle"
+                android:hint="Temporary City"/>
+
+            <TextView android:id="@+id/tvTempAddresspincode"
+                style="@style/EditFieldStyle"
+                android:hint="Temporary Address Pincode"/>
+
+            <TextView
+                android:text="Permanent Address"
+                android:textColor="@color/yellow"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" />
+
+            <TextView android:id="@+id/tvPermAddress"
+                style="@style/EditFieldStyle"
+                android:hint="Permanent Address line"/>
+
+            <TextView android:id="@+id/tvPermAddresscity"
+                style="@style/EditFieldStyle"
+                android:hint="Permanent city"/>
+
+            <TextView android:id="@+id/tvPermAddresspincode"
+                style="@style/EditFieldStyle"
+                android:hint="Permanent Address Pincode"/>
+
+            <TextView android:id="@+id/tvPhone"
+                style="@style/EditFieldStyle"
+                android:hint="Mobile Number"/>
+
+            <TextView android:id="@+id/tvEmail"
+                style="@style/EditFieldStyle"
+                android:hint="Email"/>
+
+            <TextView
+            android:text="Whom to Meet"
+            android:textColor="@color/yellow"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+            <TextView android:id="@+id/tvWhom"
+                style="@style/EditFieldStyle"
+                android:hint="Name: Whom to meet"/>
+
+            <!-- WHOM TO MEET -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                style="@style/EditFieldStyle"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvWhomPhone"
+                    android:text="+91 9876543210"
+                    android:textColor="@color/text_white"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/btnCall"
+                    android:src="@drawable/ic_call"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+            </LinearLayout>
+
+            <TextView android:id="@+id/tvDescription"
+                style="@style/EditFieldStyle"/>
+
+            <!-- VEHICLE -->
+            <TextView
+                android:text="Vehicle Details"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="12dp"/>
+
+            <ImageView
+                android:id="@+id/ivVehicle"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_card_round"/>
+
+            <TextView
+                android:id="@+id/tvVehicleNumber"
+                android:text="MH 14 KV 2533"
+                android:textColor="@color/text_white"
+                android:textSize="16sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="6dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutExit"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="EXIT DETAILS"
+                android:textColor="@color/yellow"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="10dp" />
+
+            <TextView android:id="@+id/tvExitDateTime"
+                style="@style/EditFieldStyle"
+                android:hint="Exit date and time"/>
+
+            <TextView android:id="@+id/tvRemark"
+                style="@style/EditFieldStyle"
+                android:hint="Remark"/>
+
+            <TextView android:id="@+id/tvAgainVisit"
+                style="@style/EditFieldStyle"/>
+
+            <TextView android:id="@+id/tvNextVisit"
+                style="@style/EditFieldStyle"
+                android:hint="Next visit date and time"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/bg_dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_back_white"
+        android:contentDescription="Back"/>
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Name"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/input_field"
+        android:padding="15dp"
+        android:textColor="@color/text_white"
+        android:textColorHint="@color/text_grey"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Email"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/input_field"
+        android:padding="15dp"
+        android:textColor="@color/text_white"
+        android:textColorHint="@color/text_grey"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Phone"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/input_field"
+        android:padding="15dp"
+        android:textColor="@color/text_white"
+        android:textColorHint="@color/text_grey"
+        android:inputType="phone"
+        android:maxLength="10"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Save Changes"
+        android:textColor="@color/text_white"
+        android:background="@drawable/bg_button_round"
+        android:layout_marginTop="30dp"/>
+</LinearLayout>

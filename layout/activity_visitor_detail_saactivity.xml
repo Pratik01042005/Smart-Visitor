@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg_dark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- HEADER -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_back_white"/>
+
+            <LinearLayout
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/btnDownload"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_download"/>
+
+                <ImageView
+                    android:id="@+id/btnDelete"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/ic_delete"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- DETAILS CARD -->
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card_round"
+            android:padding="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:text="Visitor Name"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_white"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <!-- PHONE + CALL -->
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvPhone"
+                    android:layout_weight="1"
+                    android:text="Phone"
+                    android:textColor="@color/text_grey"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/btnCall"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_call"
+                    android:background="@drawable/bg_button_round"
+                    android:padding="8dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:text="Email"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_grey"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/tvPurpose"
+                android:text="Purpose"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_white"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:text="Visit Date"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_grey"
+                android:layout_marginTop="6dp"/>
+
+            <!-- NEW: VISIT TIME -->
+            <TextView
+                android:id="@+id/tvTime"
+                android:text="Visit Time"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_grey"
+                android:layout_marginTop="4dp"/>
+
+            <!-- NEW: DESCRIPTION -->
+            <TextView
+                android:id="@+id/tvDescription"
+                android:text="Description"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_white"
+                android:layout_marginTop="12dp"/>
+
+            <TextView
+                android:id="@+id/tvVisitorStatus"
+                android:text="Pending"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/yellow"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <!-- ACTION BUTTONS -->
+        <LinearLayout
+            android:id="@+id/actionLayout"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/btnAccept"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_green"
+                android:src="@drawable/ic_check"/>
+
+            <ImageView
+                android:id="@+id/btnReject"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/bg_button_red"
+                android:src="@drawable/ic_close"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

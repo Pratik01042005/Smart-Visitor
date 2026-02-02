@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <!-- HEADER GRADIENT -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_profile_header"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_back_white"
+                app:tint="@color/text_white"
+                android:layout_alignParentStart="true"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="@color/text_white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <!-- PROFILE IMAGE -->
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/profile" />
+
+    </LinearLayout>
+
+    <!-- CONTENT AREA -->
+    <LinearLayout
+        android:layout_below="@id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- NAME -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            style="@style/EditFieldStyle"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_user"
+                app:tint="@color/red" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Super Admin Name"
+                android:textSize="18sp"
+                android:textColor="@color/text_white"
+                android:layout_marginStart="15dp" />
+        </LinearLayout>
+
+        <!-- EMAIL -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            style="@style/EditFieldStyle"
+            android:gravity="center_vertical"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_email"
+                app:tint="@color/red" />
+
+            <TextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="example@gmail.com"
+                android:textSize="17sp"
+                android:textColor="@color/text_white"
+                android:layout_marginStart="15dp" />
+        </LinearLayout>
+
+        <!-- PHONE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            style="@style/EditFieldStyle"
+            android:gravity="center_vertical"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/ic_call"
+                app:tint="@color/red" />
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9876543210"
+                android:textSize="17sp"
+                android:textColor="@color/text_white"
+                android:layout_marginStart="15dp" />
+        </LinearLayout>
+
+        <!-- EDIT PROFILE BUTTON -->
+        <Button
+            android:id="@+id/btnEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Edit Profile"
+            android:textColor="@color/text_white"
+            android:background="@drawable/bg_button_round"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp" />
+
+        <!-- LOGOUT BUTTON -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Logout"
+            android:textColor="@color/text_white"
+            android:background="@drawable/bg_button_red"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>
