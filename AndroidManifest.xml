@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.meetpoint">
+
+    <!-- ================= PERMISSIONS ================= -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- CAMERA PERMISSION (MISSING IN YOUR FILE) -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Storage -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Android 13+ images -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <!-- Notifications -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- ================= CAMERA FEATURE ================= -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <!-- ================= ANDROID 11+ CAMERA QUERY (REQUIRED) ================= -->
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <!-- ================= APPLICATION ================= -->
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/logo1"
+        android:label="Smart Visitors"
+        android:roundIcon="@drawable/logo1"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MeetPoint"
+        android:usesCleartextTraffic="true">
+
+        <!-- ================= FILE PROVIDER ================= -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- ================= FIREBASE ================= -->
+        <service
+            android:name=".firebase.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- ================= SPLASH ================= -->
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MeetPoint.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ================= AUTH ================= -->
+        <activity android:name=".WelcomeActivity" android:exported="false" />
+        <activity android:name=".activities.LoginActivity" android:exported="false" />
+        <activity android:name=".activities.SignupActivity" android:exported="false" />
+        <activity android:name=".activities.ForgotPasswordActivity" android:exported="false" />
+        <activity android:name=".activities.ResetPasswordActivity" android:exported="false" />
+        <activity android:name=".activities.SuccessActivity" android:exported="false" />
+
+        <!-- ================= DASHBOARDS ================= -->
+        <activity android:name=".AdminDashboardActivity" android:exported="false" />
+        <activity android:name=".activities.SuperAdminDashboardActivity" android:exported="false" />
+
+        <!-- ================= VISITOR ================= -->
+        <activity android:name=".AddVisitorActivity" android:exported="false" />
+        <activity android:name=".VisitorDetailActivity" android:exported="false" />
+        <activity android:name=".VisitorDetailSAActivity" android:exported="false" />
+        <activity android:name=".EditVisitorSAActivity" android:exported="false" />
+
+        <!-- ================= PROFILE ================= -->
+        <activity android:name=".ProfileActivity" android:exported="false" />
+        <activity android:name=".ProfileSAActivity" android:exported="false" />
+        <activity android:name=".EditProfileActivity" android:exported="false" />
+        <activity android:name=".EditUserProfileActivity" android:exported="false" />
+        <activity android:name=".EditSuperAdminProfile" android:exported="false" />
+
+        <!-- ================= VEHICLE & EXIT ================= -->
+        <activity android:name=".AddVehicleActivity" android:exported="false" />
+        <activity android:name=".ExitDetailsActivity" android:exported="false" />
+
+    </application>
+
+</manifest>
